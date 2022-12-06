@@ -7,7 +7,7 @@ export function Modal(props : IModal)
         props.isOpen ?
         <div 
             className='modal_container'
-            onClick={() => props.toggle(props.isOpen)}
+            onClick={() => props.toggle({isOpen : props.isOpen})}
         >
             <div
                 className='modal_box'
@@ -15,12 +15,12 @@ export function Modal(props : IModal)
             >
                 <button
                     type='button'
-                    onClick={() => props.toggle(props.isOpen)}
+                    onClick={() => props.toggle({isOpen : props.isOpen})}
                 >
                     Fechar Modal
                 </button>
                 <p>
-                    Login Realizado!
+                    {props.modalMessage}
                 </p>
             </div>
         </div> : 

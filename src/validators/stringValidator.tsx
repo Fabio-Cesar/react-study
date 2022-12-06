@@ -1,18 +1,16 @@
-import Validator from "./abstractValidator";
+import { Validator } from "./abstractValidator"
 
-class StringValidator extends Validator
+export class StringValidator extends Validator
 {
     constructor(data: any)
     {
         if (typeof(data) === 'string')
         {
-            super(data);
+            super(data)
         }
         else
         {
-            throw new Error("Deve ser informado uma string, o tipo está errado");
+            throw new Error("Deve ser informado uma string, o tipo está errado")
         }
     }
 }
-
-export default StringValidator;

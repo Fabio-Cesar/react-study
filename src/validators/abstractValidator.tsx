@@ -1,11 +1,9 @@
-class Validator
+export class Validator
 {
-    protected _data: string | number | boolean;
+    protected _data: string | number | boolean
 
     constructor(data: any)
     {
-        this._data = data;
+        this._data = data
     }
 }
-
-export default Validator;
