@@ -1,22 +1,20 @@
-import StringValidator from "./stringValidator";
+import { StringValidator } from "./stringValidator"
 
-class RegexValidator extends StringValidator
+export class RegexValidator extends StringValidator
 {
     constructor (data: any)
     {
-        super(data);
+        super(data)
 
-        const stringData = this._data as string;
+        const stringData = this._data as string
         if (!stringData.match(this.regex))
         {
-            throw new Error('O formato está errado');
+            throw new Error(`O formato de ${this._data} está errado`)
         }
     }
 
     get regex()
     {
-        return new RegExp("");
+        return new RegExp("")
     }
 }
-
-export default RegexValidator;
